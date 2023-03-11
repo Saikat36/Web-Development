@@ -1,0 +1,101 @@
+
+<!--    HTML CSS Combinators
+
+    Lecture = 29
+    Assignment = 43
+
+    png 1 = https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-05-19/pricing_893700.png
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            text-align: center;
+            width: 40%;
+            margin: auto;
+        }
+        #heading > h1 {
+            font-size: 40px;
+        }
+        #heading > p {
+            line-height: 25px;
+            color: gray;
+        }
+        #cards-section{
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+        }
+        #cards-section > div{
+            width: 30%;
+            height: 98%;
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            border-radius: 20px;
+        }
+        h2 + h1 + p {
+            font-style: italic;
+        }
+        p + p {
+            line-height: 22px;
+            padding: 20px;
+        }
+
+        button{
+            border: 1px solid blue;
+            background-color: transparent;
+            color: blue;
+            font-size: 22px;
+            font-weight: bold;
+                /* border-radius: top-left, top-right, bottom-right, bottom-left */
+            border-radius: 10px;        /* border-radius "border" ke circle kore */
+            padding: 10px 20px 10px 20px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <h1>Choose a plan right for your business</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, excepturi. Voluptas blanditiis ab non, obcaecati possimus ipsa quia iste hic!
+        </p>
+    </div>
+
+    <!-- Cards Sections -->
+    <div id="cards-section">
+        <!-- This sections have 3 child divs, each div should have h2,h1,p,p,button -->
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per Month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi nesciunt, voluptas ullam?</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per Month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi nesciunt, voluptas ullam?</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per Month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi nesciunt, voluptas ullam?</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>

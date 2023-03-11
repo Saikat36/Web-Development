@@ -1,0 +1,66 @@
+
+
+<!--    HTML CSS Combinators
+
+    Lecture = 29
+    Assignment = 43
+
+    png 1 = https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-05-19/pricing_893700.png
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Combinators</title>
+    <style>
+
+                        /* General Sibling selectors ( ~ ) */
+
+        h1 ~ p ~ p 
+        {
+            background-color: red;
+        }
+
+                        /* Adjacent Sibling selectors ( + )  */
+
+        h1 + p{
+            color: aqua;
+        }
+
+                        /* Attribute Selector */
+
+        a[href="https://www.google.com"]
+        {
+            color: greenyellow;
+            font-size: 30px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>h1</h1>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <h3>h3</h3>
+    </div>
+
+    <div id="box">
+        <h1>h4</h1>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        <h3>h6</h3>
+    </div>
+
+                        <!--  Attribute Selector  -->
+
+    <a href="https://www.google.com">Go To Google</a>
+
+</body>
+</html>
