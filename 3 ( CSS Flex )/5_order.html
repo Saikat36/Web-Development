@@ -1,0 +1,48 @@
+
+                    <!-- order -->
+
+<!-- proti ta child div a "order" value = 0 thake by default , jamon box ke sajate hobe sai hisab a "order" value change kora hoi-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        .box{
+                font-size: 20px;
+                border: 5px solid;
+                display: flex;
+                flex-direction: row;
+                height: 400px;
+                justify-content: center;
+                align-items:center;
+                
+        }
+        .box > div{
+                padding: 30px;
+        }
+        .box > div:first-child{
+                background-color: teal;
+                order: 2;
+        }
+        .box > div:nth-child(2){
+                background-color: orange;
+                order: 3;
+        }
+        .box > div:nth-child(3){
+                background-color: blueviolet;
+                order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

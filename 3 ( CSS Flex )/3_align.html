@@ -1,0 +1,51 @@
+
+<!-- 
+        justify-content: center;
+        align-items: center;
+
+    kono box ke center a nea aste use hoi ai 2 to property
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+        .box{
+                font-size: 20px;
+                border: 5px solid;
+                display: flex;
+                flex-direction: row;
+                height: 400px;
+                
+                /* For centering any box we can use this 2 property*/
+                justify-content: center;
+                align-items:center;
+                
+        }
+        .box > div{
+                padding: 30px;
+                /* margin: auto; */
+        }
+        .box > div:first-child{
+                background-color: teal;
+        }
+        .box > div:nth-child(2){
+                background-color: orange;
+        }
+        .box > div:nth-child(3){
+                background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

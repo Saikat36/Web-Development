@@ -1,0 +1,82 @@
+<!--    CSS Flex
+
+        Assignment = 41
+        lecture = 28
+
+        png 1 = https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-05-23/flex%20we_278778.png
+
+        png 2 = https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-05-23/masai%20_665906.png
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                h1{
+                        text-align: center;
+                        width: 20%;
+                        margin: auto;    
+                }
+                #container{
+                        width: 60%;
+                        margin: auto;
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: space-evenly;
+                        background-color: #ffe6d5;
+                        padding: 60px 40px;
+                        border-radius: 20px;
+                }
+                #container > div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 15%;
+                        background-color: white;
+                        border-radius: 20px;
+                }
+                div > p:nth-child(1){
+                        font-size: 20px;
+                        background-color: #ffe6d5;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                }
+                div > p+p {
+                        width: 80%;
+                        margin: auto;
+                        text-align: center;
+                        margin-bottom: 10px;
+                }
+        </style>
+</head>
+<body>
+<h1>Ready to realise Your Career Portal</h1>
+<div id="container">
+        <div>
+                <p>1</p>
+                <p>Lorem ipsum dolor </p>
+        </div>
+        <div>
+                <p>2</p>
+                <p>Lorem ipsum dolor </p>
+        </div>
+        <div>
+                <p>3</p>
+                <p>Lorem ipsum dolor </p>
+        </div>
+        <div>
+                <p>4</p>
+                <p>Lorem ipsum dolor </p>
+        </div>
+        <div>
+                <p>5</p>
+                <p>Lorem ipsum dolor </p>
+        </div>
+</div>
+</body>
+</html>
