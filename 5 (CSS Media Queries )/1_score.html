@@ -1,0 +1,52 @@
+<!-- 
+
+    SICTU   
+
+    S = Inline style = 1000
+    I = Id = 100
+    C = Class = 10
+    T = Tag (p,div) = 1
+    U = Universal(*), combinator(>,~, ) = 0
+ 
+
+
+    Selector Name                                     Score
+
+      Inline ---------------------------------------- 1000
+        Id  ----------------------------------------   100
+Class, attribute, pseudo classes (:nth child) --------- 10
+Tag, pseudo element (::after) -------------------------  1
+Universal,combinators (+, >, ",) ----------------------- 0
+
+  -->
+
+
+<!-- 
+
+ 1.  div ~ p::first-letter 
+
+    div = 1
+    p = 1
+    ::first-letter = 1 
+--------------------------
+total score =  3
+--------------------------
+
+
+
+2.  #masai ~ .box > li > a[title]
+
+
+    #masai = 100
+        ~  =   0
+    .box   =  10
+        >  =   0
+        li =   1
+        >  =   0
+        a  =   1
+   [title] =  10    ( attribute = 10 )
+--------------------------
+total score = 122
+--------------------------
+
+ -->
