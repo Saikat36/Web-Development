@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="name" placeholder="Enter your name" type="text">
+    <input id="email" placeholder="Enter your email" type="email">
+    <select id="gender">
+        <option>Select Gender</option>
+        <option value="Male">Boy</option>
+        <option value="Female">Girl</option>
+    </select>    
+    <button onclick="getData()">Submit</button>     <!-- Button -->
+    <h1 id="nameDis">Display Entered Name Here</h1>
+    <h1 id="emailDis">Display Entered email Here</h1>
+    <button onclick="callAlert()">Alert Button</button>    <!-- Button -->
+
+
+</body>
+</html>
+
+<script>
+
+    function getData()
+    {
+
+        /* input tag a jeta input box-er modha diya hobe seta ke (.value) dea access kora hoi */
+
+        let username = document.getElementById("name").value;
+        let useremail = document.getElementById("email").value;
+
+        console.log(username,useremail);  /* If I want to see the result on console*/
+
+        /*   If I want to see the Entered name & email on Browser */
+        document.getElementById("nameDis").innerText = username;
+        document.getElementById("emailDis").innerText = useremail;
+
+        /* select tag a option-er value te jeta diya hobe seta ke (.value) dea access kora hoi */
+
+        let gen = document.getElementById("gender").value;
+        console.log(gen);
+    }
+    
+
+    /* This is a alert button */
+
+    function callAlert()
+    {
+        alert("I am Looking at you");
+    }
+
+
+/* 1:25 */
+
+</script>

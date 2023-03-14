@@ -6,8 +6,44 @@ Create an age_check.html file. With an input field (takes the age of the user) a
 
 When the user clicks the button the following must happen:
 
-If the user is older than 18 print You can drive in India! in the p tag.
-If the user is younger than 18 print You can't drive in India in the p tag.
-If the user is exactly 18 years old print You are just old enough to drive in India! in the p tag.
+   1. If the user is older than 18 print You can drive in India! in the p tag.
+   2. If the user is younger than 18 print You can't drive in India in the p tag.
+   3. If the user is exactly 18 years old print You are just old enough to drive in India! in the p tag.
 
  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="number" placeholder="enter age">
+    <button onclick="agecheck()">Age Check</button>
+    <p id="res">Display Result here</p>
+</body>
+</html>
+
+
+<script>
+
+    function agecheck()
+    {
+        let userage = document.getElementById('age').value;
+        
+        if (userage >18) {
+            document.getElementById("res").innerText = "You can drive In INDIA";
+        }
+        else if (userage < 18) {
+            document.getElementById("res").innerText = "You can't drive In INDIA";
+        }
+        else{
+            document.getElementById("res").innerText = "You are just elegible for drive In INDIA";
+        }
+    }
+
+</script>
