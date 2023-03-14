@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add-Event-Listner</title>
+</head>
+<body>
+    <button>Like me</button>
+</body>
+</html>
+
+<script>
+
+    /* onClick event-er bodola use hoi addEventListner("eventName",functionName) */
+
+    /*  Syntex =  addEventListner("eventName",functionName)     */
+    
+    /*  Here eventName = onClick but addEventListener a "on" likha hoina   
+        and functionName = likefun      */
+
+    document.querySelector("button").addEventListener("click",likefun);
+
+    function likefun()
+    {
+        console.log("inside like");
+    }
+
+</script>
+
+<!-- 
+
+Here are some Event which are use in = addEventListner("eventName",functionName)
+    
+
+           Event name                    Description
+
+            change              An HTML element has been changed
+            click               The user clicks an HTML element
+            mouseover           The user moves the mouse over an HTML element
+            mouseout            The user moves the mouse away from an HTML element
+            keydown             The user pushes a keyboard key
+            load                The browser has finished loading the page
+
+ -->

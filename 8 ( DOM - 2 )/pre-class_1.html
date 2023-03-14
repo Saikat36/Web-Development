@@ -1,0 +1,74 @@
+
+    <!-- querySelector problem statement -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pre class 1</title>
+</head>
+<body>
+    <p class="container">Lorem ipsum dolor sit amet.</p>
+    <p class="container">Lorem ipsum dolor</p>
+    <h5>h5-1</h5>
+    <h5>h5-2</h5>
+    <h5>h5-3</h5>
+    <h1 id="masai">Masai school</h1>
+    <h1>I am heading 1</h1>
+    <h1>I am heading 2</h1>
+    <p>p1</p>
+    <p class="school">p2</p>
+    <p>p3</p>
+    <p class="school">p4</p>
+</body>
+</html>
+
+<script>
+
+    /* getElementById age dekha holo now see the peragraph catch by class name */
+
+    let store_class  = document.getElementsByClassName("container");
+    console.log(store_class);    // HTMLCollection(2) [p.container, p.container]
+
+
+
+
+    /* getElementsByTagName =>  Tag name */
+
+    let store_Tag  = document.getElementsByTagName("h5");
+    console.log(store_Tag);     // HTMLCollection(3) [h5, h5, h5]
+    for (let i = 0; i < store_Tag.length; i++) {
+        store_Tag[i].style.backgroundColor="yellow";
+    }
+
+
+
+    /* Here 3 (h1) tag avalable but querry selector only select 1st tag */
+
+    let heading = document.querySelector('h1');
+    heading.style.backgroundColor = "red";
+
+
+
+
+    /* Here both class have same name but querry selector 
+       only select 1st matching class name */
+
+    let x = document.querySelector(".school");
+    x.style.backgroundColor = "teal";
+
+
+
+
+    /* Here 4 (p) tag avalable but querry selector only select 1st tag */
+
+    let y = document.querySelector("body>p");
+    y.style.fontSize = "50px";
+
+
+</script>
+
+
+<!-- 37 min -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event pass on function argument</title>
+</head>
+<body>
+    <button> Click me </button>
+</body>
+</html>
+
+<script>
+
+    document.querySelector("button").addEventListener("click", myFunction);
+
+/*  
+
+    1. whenever you add an event to any element, an additional event object will formed which has some additional properties of event
+
+    2. where can you access that event object? you can access it in function parameter  
+    
+*/
+
+    function myFunction (event) {
+        console.log(event);
+        console.log(event.target);      // <button> Click me </button>
+        console.log(event.target.innerText);      // Click me
+    }
+
+</script>

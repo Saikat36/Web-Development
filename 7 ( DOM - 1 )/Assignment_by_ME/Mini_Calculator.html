@@ -26,9 +26,48 @@
 
 -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+</head>
+<body>
+    <input type="number" placeholder="enter 1st Number" id="fir">
+    <input type="number" placeholder="enter 2nd Number" id="sec">
+    <br><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="multi()">Multiplication</button>
+    <button onclick="divi()">Division</button>
 
-<!-- 
-
-    Solution at = https://course.masaischool.com/storage/assignments/11663/problem/26108/user/fw19_0375/i9BxycZkSIOeWENg6n7nBdZmPTOqeAdk5CwQVfwo.html
-
- -->
+   <script>
+        function add() {
+            let x = Number(document.getElementById("fir").value);
+            let y = Number(document.getElementById("sec").value);
+            let sum = x+y;
+            console.log(sum);
+        }
+        function sub() {
+            let x = Number(document.getElementById("fir").value);
+            let y = Number(document.getElementById("sec").value);
+            let sub = x-y;
+            console.log(sub);
+        }
+        function multi() {
+            let x = Number(document.getElementById("fir").value);
+            let y = Number(document.getElementById("sec").value);
+            let multiply = x*y;
+            console.log(multiply);
+        }
+        function divi() {
+            let x = Number(document.getElementById("fir").value);
+            let y = Number(document.getElementById("sec").value);
+            let Division = x/y;
+            console.log(Division);
+        }
+   </script>
+</body>
+</html>

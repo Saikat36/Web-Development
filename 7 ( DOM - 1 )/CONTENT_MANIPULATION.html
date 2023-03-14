@@ -16,18 +16,24 @@
 	<script type="text/javascript">
 		function setFirstName() {
 			// Change the content of h1 to your first name
+			document.getElementById('firstname').innerText = "Saikat";
 		}
 
 		function setLastName() {
 			// Change the content of div to your last name
+			document.getElementById('lastname').innerText = "Patra";
 		}
 
 		function setFullName() {
 			// Change the content of p to your full name (firstname - lastname)
+			document.getElementById('fullname').innerText = "Saikat - Patra";
 		}
 
 		function resetDefaults(){
 			// reset the firstname, lastname, and fullname to empty values
+			document.getElementById('firstname').innerText = "Hello";
+			document.getElementById('lastname').innerText = "MASAI";
+			document.getElementById('fullname').innerText = "School";
 		}
 	</script>
 </body>
@@ -35,6 +41,4 @@
 
 <!-- 
     Complete all the functions by creating a copy of the above template with the file name content_manipulation.html
-
-    SOLUTION = https://course.masaischool.com/storage/assignments/11664/problem/25237/user/fw19_0375/dLM6EDf5uL879thV6wTfCaP85To317XfYsAl7YXZ.html
  -->

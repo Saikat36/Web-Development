@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="masai">Masai school</h1>
+    <h2 class="ft-web-19">Moin</h2>
+    <p>Tanuj</p>
+    <p>Rishav</p>
+    <h3 class="ft-web-19">Avinash</h3>
+    <h4 id="php">I am php</h4>
+    <p class="all">p1</p>
+    <p class="all">p2</p>
+    <p class="all">p3</p>
+    <p class="all">p4</p>
+  </body>
+</html>
+<script>
+
+    //getElementById
+
+    let x = document.getElementById("masai");
+    x.style.backgroundColor = "red";
+
+    //getElementsByClassName
+
+    let y = document.getElementsByClassName("ft-web-19"); // y = [h2, h3]
+    for (let i = 0; i < y.length; i++) {
+        y[i].style.backgroundColor = "pink";
+    }
+
+    //getElementsByTagName
+
+    var z = document.getElementsByTagName("p");
+    for (let i = 0; i < y.length; i++) {
+        z[i].style.backgroundColor = "yellow";
+    }
+
+    // querySelector
+    let php = document.querySelector("#php");
+    console.log(php);
+
+
+    // querySelectorAll
+    let all = document.querySelectorAll(".all");
+    console.log(all);     // NodeList(4) [p.all, p.all, p.all, p.all]
+</script>

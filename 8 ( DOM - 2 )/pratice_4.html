@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event element + parent node</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: 100px;
+        gap: 20px;
+        background-color: pink;
+        padding: 20px;
+      }
+
+      #container > div {
+        background-color: teal;
+        font-size: 40px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+/*  
+
+    1. whenever you add an event to any element, an additional event object will formed which has some additional properties of event
+
+    2. where can you access that event object? you can access it in function parameter  
+    
+*/
+
+  var boxes = document.querySelectorAll("#container>div");
+  //console.log(boxes);   //  NodeList(4) [div, div, div, div]
+
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("click", displayNumber);
+  }
+
+  function displayNumber(event) {
+    //console.log(event);
+    console.log(event.target.innerText);  // 1 2 3 4
+  }
+
+
+/* 
+  Parent node - here if I click on child div, 
+                the parent node will be triggered
+
+*/
+
+  // function displayNumber(event) 
+  // {
+  //   console.log(event.target.parentNode);
+  //   event.target.parentNode.style.backgroundColor = "red";
+  // } 
+  
+
+</script>

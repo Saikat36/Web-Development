@@ -1,0 +1,61 @@
+
+
+<!-- 
+
+Here are some Event which are use in = addEventListner("eventName",functionName)
+    
+
+           Event name                    Description
+
+            change              An HTML element has been changed
+            click               The user clicks an HTML element
+            mouseover           The user moves the mouse over an HTML element
+            mouseout            The user moves the mouse away from an HTML element
+            keydown             The user pushes a keyboard key
+            load                The browser has finished loading the page
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+    <h1>I am heading</h1>
+</body>
+</html>
+
+<script>
+
+/* addEventListner("event name",function name) */
+
+    document.querySelector("button").addEventListener("click",myFunction);
+    function myFunction()
+    {
+        console.log("Someone click me");
+    }
+
+
+/* Event = mouseover */
+
+    document.querySelector("h1").addEventListener("mouseover",before_mouseover);
+    function before_mouseover()
+    {
+        document.querySelector("h1").style.color = "red";
+    }
+
+/* Event =  mouseout */
+
+    document.querySelector("h1").addEventListener("mouseout",fun_mouseout);
+    function fun_mouseout()
+    {
+        document.querySelector("h1").style.color = "black";
+    }
+
+
+</script>

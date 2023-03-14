@@ -26,6 +26,8 @@
 
 <script>
 
+            /*    NOTE:-  Input Tag & Select tag a (.value) dea access kora hoi     */
+
     function getData()
     {
 
@@ -36,14 +38,16 @@
 
         console.log(username,useremail);  /* If I want to see the result on console*/
 
+
         /*   If I want to see the Entered name & email on Browser */
         document.getElementById("nameDis").innerText = username;
         document.getElementById("emailDis").innerText = useremail;
 
+
         /* select tag a option-er value te jeta diya hobe seta ke (.value) dea access kora hoi */
 
         let gen = document.getElementById("gender").value;
-        console.log(gen);
+        console.log(gen);    /* If I want to see the result on console*/
     }
     
 
