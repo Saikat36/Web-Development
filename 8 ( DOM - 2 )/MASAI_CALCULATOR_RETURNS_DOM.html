@@ -5,3 +5,130 @@
     Complete the functionality part of Masai calculator
 
  -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculater</title>
+     <style>
+         h1{
+             text-align: center;
+             color: teal;
+         }
+         #calculater{
+             height: 510px;
+             width: 38%;
+             border: 1px solid transparent;
+             margin: auto;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+         }
+         #display{
+             height: 12%;
+             width: 75%;
+             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+             margin: auto;
+             margin-top: 50px;
+             margin-bottom: 30px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 25px;
+         }
+         #keybord{
+             width: 85%;
+             height: 70%;
+             margin: auto;
+             margin-top: 20px;
+             display: grid;
+             grid-template-columns: repeat(4,1fr);
+             grid-template-rows: repeat(4,80px);
+             gap: 10px;
+         }
+         #keybord > div{
+             box-shadow: rgba(100, 100, 111, 0.2) 5px 20px 29px 10px;
+             display: grid;
+             justify-content: center;
+             align-items: center;
+             font-size: 20px;
+             font-weight: bold;
+             border-radius: 20px;
+         }
+ 
+         #keybord > div:hover{
+             background-color: pink;
+             cursor: pointer;
+         }
+         .black{
+             background-color: black;
+             color: white;
+         }
+ 
+         .red{
+             background-color: red;
+             color: white;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>Calculater</h1>
+     <div id="calculater">
+         <div id="display">
+            <!-- display the number here -->
+         </div>
+         <div id="keybord">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div class="black">+</div>
+             <div>4</div>
+             <div>5</div>
+             <div>6</div>
+             <div class="black">-</div>
+             <div>7</div>
+             <div>8</div>
+             <div>9</div>
+             <div class="black">*</div>
+             <div class="red">C</div>
+             <div>0</div>
+             <div class="black">=</div>
+             <div class="black">/</div>
+         </div>
+     </div>
+ </body>
+ </html>
+            <!-- "eval" is a function which will calculate any no 
+               even if the number are in under bracket("") like 
+               this = ("4+5") but it will work on string also -->
+ <script>
+
+   let keys = document.querySelectorAll("#keybord>div");
+   let bag = "";
+
+   for (let i = 0; i < keys.length; i++) {
+      keys[i].addEventListener("click",myCal);
+   }
+
+
+   function myCal(event) 
+   {
+      let targetNo = event.target.innerText; 
+      
+      if (targetNo=="C") {
+         bag = "";
+         document.querySelector("#display").innerText = "";
+      }
+      else if(targetNo=="=")
+      {
+         document.querySelector("#display").innerText = eval(bag);   
+      }
+      else{
+         bag = bag + targetNo;
+         document.querySelector("#display").innerText = bag;
+      }
+
+   }
+
+ </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+        <form>          <!-- wrap input tags around form tag -->
+            <input id="name" placeholder="enter name" /> 
+            <input id="mobile" type="number" placeholder="Enter mobile number"/>
+            <input type="submit"/>  <!-- use input type as submit and not button -->
+        </form>
+
+            <h1></h1>
+            <h2></h2>
+  </body>
+</html>
+
+<script>
+  /* add EventListener to form tag // event name should be submit */
+  document.querySelector("form").addEventListener("submit", myFunction);
+
+    function myFunction() 
+    {   
+      /* add event.preventDefault() */
+        event.preventDefault();    // browser a output jate refresh na hoi 
+
+        var name = document.querySelector("#name").value; 
+        var mob = document.querySelector("#mobile").value; 
+        document.querySelector("h1").innerText = name; 
+        document.querySelector("h2").innerText = mob;
+    }
+
+// forms steps:-
+
+//  1. wrap input tags around form tag
+//  2. use input type as submit and not button
+//  3. add EventListener to form tag
+//  4. event name should be submit
+//  5. add event.preventDefault()
+
+</script>

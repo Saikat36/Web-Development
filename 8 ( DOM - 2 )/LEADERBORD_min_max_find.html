@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIN & MAX LEADERBOARD (DOM)</title>
+    <style>
+        body {
+            width: 600px;
+            margin-inline: auto;
+        }
+
+        #score {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 125px;
+            gap: 350px;
+            justify-content: space-between;
+        }
+
+        #score>p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            border-radius: 6px;
+        }
+
+        #score>p:first-child {
+            background-color: rgb(254, 34, 34);
+        }
+
+        #score>p:last-child {
+            background-color: green;
+        }
+
+        #score+div {
+            margin-top: -20px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 350px;
+            justify-content: space-between;
+        }
+
+        #score+div>p {
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #get>input {
+            display: block;
+            padding: 20px;
+            margin: 10px auto;
+            width: 250px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #get>div {
+            /* border: 1px solid blue; */
+            width: 270px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 70px);
+            gap: 10px;
+            grid-template-areas:
+                "b1 b2 b3"
+                "b4 b5 b6"
+                "b7 b8 b9"
+                "b10 b11 b12";
+            margin-inline: auto;
+        }
+
+        #get>div>button {
+            border-radius: 6px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        #get>div>button:nth-child(1) {
+            background-color: gray;
+            grid-area: b1;
+        }
+
+        #get>div>button:nth-child(2) {
+            background-color: orangered;
+            grid-area: b2;
+        }
+
+        #get>div>button:nth-child(3) {
+            background-color: gray;
+            grid-area: b3;
+        }
+
+        #get>div>button:nth-child(4) {
+            background-color: orangered;
+            grid-area: b4;
+        }
+
+        #get>div>button:nth-child(5) {
+            background-color: orangered;
+            grid-area: b5;
+        }
+
+        #get>div>button:nth-child(6) {
+            background-color: orangered;
+            grid-area: b6;
+        }
+
+        #get>div>button:nth-child(7) {
+            background-color: gray;
+            grid-area: b7;
+        }
+
+        #get>div>button:nth-child(8) {
+            background-color: orangered;
+            grid-area: b8;
+        }
+
+        #get>div>button:nth-child(9) {
+            background-color: gray;
+            grid-area: b9;
+        }
+
+        #get>div>button:nth-child(10) {
+            background-color: gray;
+            grid-area: b10;
+        }
+
+        #get>div>button:nth-child(11) {
+            background-color: green;
+            grid-area: b11;
+        }
+
+        #get>div>button:nth-child(12) {
+            background-color: gray;
+            grid-area: b12;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="score">
+        <p id="min">43</p>
+        <p id="max">2019</p>
+    </div>
+    <div>
+        <p>MIN</p>
+        <p>MAX</p>
+    </div>
+
+    <div id="get">
+        <input type="text" value="">
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+            <button>ENTER</button>
+            <button>C</button>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+<script>
+
+    let no_collect = document.querySelectorAll("button");
+    let bag = "";
+    let min = document.querySelector("#min").innerText;
+    let max = document.querySelector("#max").innerText;
+
+    // console.log(no_collect);
+
+    for (let i = 0; i < no_collect.length; i++) {
+        let x = no_collect[i].addEventListener("click",fun);        
+    }
+
+
+
+    function fun()
+    {
+
+        let store = event.target.innerText;
+
+        // console.log(store);
+
+
+        /* aga kono motai bag a no golo store korano jabena karon 
+           jodi "bag = 24" store kore then "ENTER" type kori 
+           tahola dekha jabe "bag = 24ENTER" hoa gache, then 
+           ai condition tai - 
+                                if(eval(bag)<min){
+
+                                }
+
+            ai condition tai "eval(bag = 24ENTER) < min" hoa jabe 
+            and ERROR asbe
+        */    
+
+
+        if (store=="C") {
+            bag = "";
+            document.querySelector("input").value = "";
+        }
+
+        else if(store == "ENTER"){
+            if(bag==""){
+                alert("Please Enter a Number");
+            }else{
+                if(eval(bag)<min){
+                    document.querySelector("#min").innerText = bag;
+                }
+                else if(eval(bag)>max){
+                    document.querySelector("#max").innerText = bag;
+                }
+            }
+        }
+
+        else{
+            bag = bag + store;  
+            document.querySelector("input").value = bag;
+        }
+
+    }
+
+</script>
