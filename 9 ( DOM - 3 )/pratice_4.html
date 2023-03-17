@@ -5,11 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pratice-4</title>
+    <style>
+      #container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,auto);
+        gap: 40px 0px;
+        margin: auto;
+      }
+      .image_class{
+        margin: auto;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+      }
+      .image_class>img:last-child{
+          width: 120px;
+          height: 100px;
+      }
+
+      
+    </style>
   </head>
-  <body></body>
+  <body>  
+
+      <div id="container">
+          <!-- 
+              1. creating 19 div inside "container"
+              2. create image tag, h2 tag & again image tag for logo
+              3. Append image, h2, logo image inside div 
+              4. Append the div inside "container div"
+          -->
+      </div>
+
+  </body>
 </html>
 
 <script>
+
   let investors = [
     {
       name: "Vijay Shekhar Sharma",
@@ -165,4 +199,43 @@
         "https://masai-website-images.s3.ap-south-1.amazonaws.com/onsurity_5500f1c3b1.png",
     },
   ];
+
+  /* 
+    forEach(<div> 
+                  <img src="" alt="" />
+                  <h2></h2>
+                  <p></p>
+                  <img src="" alt="" />
+            <div/>)
+  */
+
+  investors.forEach(function(elem,index,array){
+
+    let box = document.createElement("div");  /* 1. creating 19 div inside "container" */
+    box.setAttribute("class","image_class")
+
+
+    /* 2. create image tag, h2 tag & again image tag for logo */
+
+    let avter = document.createElement("img");  /* create image tag */
+    avter.setAttribute("src",elem.image);
+    
+    let h2 = document.createElement("h2")      /* create h2 tag, */
+    h2.innerText = elem.name;
+
+    let h4 = document.createElement("h4")      /* create h2 tag, */
+    h4.innerText = elem.role;
+
+    let logo = document.createElement("img");  /* create image tag */
+    logo.setAttribute("src",elem.companyLogo);
+
+
+
+    box.append(avter,h2,h4,logo);    /* 3. Append image, h2, logo image inside div  */
+    document.querySelector('#container').append(box); /* 4. Append the div inside "container div" */
+  })
+
+  
+
+
 </script>

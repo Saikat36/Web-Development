@@ -16,7 +16,7 @@ let res = sweet.map(function(element,index,array){
     return element;
 });
 
-console.log(res);
+console.log("\n",res,"\n");
 
 
 /* ---------------------------------------------------------------- */
