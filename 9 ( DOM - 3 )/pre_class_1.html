@@ -10,7 +10,8 @@
         <form>          <!-- wrap input tags around form tag -->
             <input id="name" placeholder="enter name" /> 
             <input id="mobile" type="number" placeholder="Enter mobile number"/>
-            <input type="submit"/>  <!-- use input type as submit and not button -->
+            <input type="submit" value="Hey click me"/>  <!-- use input type as submit and not button -->
+            
         </form>
 
             <h1></h1>
@@ -31,6 +32,8 @@
         var mob = document.querySelector("#mobile").value; 
         document.querySelector("h1").innerText = name; 
         document.querySelector("h2").innerText = mob;
+
+        
     }
 
 // forms steps:-
@@ -42,3 +45,13 @@
 //  5. add event.preventDefault()
 
 </script>
+
+<!-- 
+
+document.querySelector("form").addEventListener("submit", myFunction);
+
+Explain:-
+
+atar mane holo akta "from" catch kora holo "document.querySelector("form")" dea, ai "from" tai akta attribute set a6e , ai attribute type holo "submit". Ai "submit" attribute wala je "input tag" a6a setai "myFunction" name a function add kora holo, ai "myFunction" er modha ja ja add korar kora nayar por jokon complete hoa jabe tokon, button a click korla sai output show hobe "browser" a kintu dea songa song refresh hoa jabe page ta and output vanice hoa jabe, ai output dekhbar jonno ai refresh ta bondho korta hobe tai, "event.preventDefault()" use kora hobe function-er a jate refresh ta bondho hoa jai
+
+ -->

@@ -1,0 +1,28 @@
+
+    solution at = https://cosmic-blini-b16b2d.netlify.app/
+
+Your app consists a form which contain 2 input tags and 1 select tag (this is already in template provided).
+
+Form will take:- 
+
+    month (select tag)
+    income (input type of number)
+    savings (input type of number)
+
+On form submit all the values of the form should be appended in a div with an id of "reports" in small cards.
+
+Each card should have following data with mentioned tags
+    Month - h1 tag
+    income - p tag
+    expense - p tag
+    In the cards, there should be another text within a h3 tag .
+
+If income < expenses you should show "DEBT" in h3 tag and the color should be "red".
+If income > expenses you should show "SAVE" in h3 tag and the color should be "green".
+If income == expenses you should show "BREAKEVEN" in h3 tag and the color should be "orange.
+Note : Make sure you use same tags in the cards
+For better understanding you can refer to this image mock.png
+In each card, there should be a delete button and on clicking, that button, that particular card should be deleted.
+Make sure you follow all rules of forms.
+
+

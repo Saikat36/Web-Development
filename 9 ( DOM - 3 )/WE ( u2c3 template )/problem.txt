@@ -1,0 +1,36 @@
+
+	SOLUTION = https://euphonious-kelpie-ec2e8d.netlify.app/
+
+	Masai Evaluation Report System:
+
+1. Your app had 6 input boxes (image,name,batch,dsa score, skillathon score,coding score)
+
+2. Take input of all the above fields from user ( HTML template is already in place just fill in js file)
+
+3. Note that all the input fields are wrapped around a form, so make sure you follow relevant steps related to form submit.
+
+4. On clicking on form submit, display all the data in form of table corresponding to their column
+
+5. Use this dummy image url for every user https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659652__340.png
+
+6. Output table should have two additional columns 
+      1. one for displaying Percentage (Hint:use percentage formula: (obtained_score/total_score)*100
+      2. one for displaying Status - Status should be "Regular" if percentage is greater than 50% , else Status should be "Async", also if status is "Async" make background color as "red", else "green".
+
+7. Also there should be additional column to delete particular entry.
+
+
+	Things to follow:
+
+1. Download the template:- WE.zip
+
+2. Following the exact HTML id's, class folder structure as mentioned in template is mandatory.
+
+3. Please do not make any changes to the HTML and css files
+
+4. Entire HTML is in place just fill in the JS files.
+
+What to Submit?
+Deployed URL (Netlify) =  https://app.netlify.com/drop
+
+Students who don't follow the rules their assignment will not be graded and this can lead to 0 score even if submission is correct.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1_setItem&getItem</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+    <p></p>
+  </body>
+</html>
+
+<script> 
+
+  //setItem("keyName", "value")
+
+  localStorage.setItem("Student-1", "Vivek");
+  localStorage.setItem("Student-2", "Lokendra");
+  localStorage.setItem("Student-3", "Tanuj");
+  localStorage.setItem("Student-2", "Rahul");
+  localStorage.setItem("Student-1-Mobile", 9898989);
+  localStorage.setItem("Student-2-Mobile", 61516161);
+
+
+  // getItem("keyName")
+  
+  let name = localStorage.getItem("Student-3");
+  document.querySelector("p").innerText = name;
+
+
+</script>

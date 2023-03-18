@@ -1,0 +1,31 @@
+
+Local Storage Limitations:- 
+
+The major limitations of local storage are:
+    Insecure data.
+    Synchronous operations.
+    Limited storage capacity.
+
+---------------------------------------------------------------------------
+
+
+How does localStorage work?
+
+To use localStorage in your web applications, there are four methods to choose from:
+
+    1. setltem(): Add key and value to local storage
+    2. getItem(): This is how you get items from localStorage
+    3. removeltem(): Remove an item by key from localStorage
+    4. clear(): Clear all localStorage
+
+
+---------------------------------------------------------------------------
+
+    Important:  Local storage stores only strings and Numbers.
+
+---------------------------------------------------------------------------
+
+
+Adding an item to local Storage syntax: 
+    syntax :-   localStorage.setltem("key","value");
+    Note:- Both key & value should be in form of string
