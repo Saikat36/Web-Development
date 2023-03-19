@@ -26,6 +26,18 @@ To use localStorage in your web applications, there are four methods to choose f
 ---------------------------------------------------------------------------
 
 
-Adding an item to local Storage syntax: 
-    syntax :-   localStorage.setltem("key","value");
+
+1. Adding an item to local Storage setltem() syntax: 
+
+    Syntax :-   localStorage.setltem("key","value");
     Note:- Both key & value should be in form of string
+
+
+2. Adding an item to local Storage getltem() syntax: 
+
+    Syntax :-   localStorage.getltem("key");
+
+
+3. Adding an item to local Storage JSON.parse() syntax: 
+
+    Syntax :- JSON.parse(localStorage.getItem("key_name"))

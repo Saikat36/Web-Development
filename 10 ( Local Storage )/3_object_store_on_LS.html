@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3_object_store</title>
+</head>
+<body>
+<!--         
+                        JSON vs object
+
+    let stu_OBJ = { student1: "vivek", student2: "sanjay" };    // obj format
+    let stu_JSON={"student1":"vivek", "student2":"sanjay"}     // JSON format
+-->
+</body>
+</html>
+
+<script>
+
+    let nameobj = {name:"saikat", place:"bangalore"};
+
+    localStorage.setItem("details",JSON.stringify(nameobj));
+    let json_format = localStorage.getItem("details");
+    console.log(json_format);   // {"name":"saikat","place":"bangalore"}
+    // This a JSON formet, remember JSON format = ("key","value")
+
+/*_____________________________________________________________*/
+
+    // JSON.parse() - It will convert JSON back to object
+    // Syntax - JSON.parse(localStorage.getItem("key_name"));
+
+    let back_to_Obj = JSON.parse(localStorage.getItem("details"));
+    console.log(back_to_Obj);    // {name: 'saikat', place: 'bangalore'}
+    
+
+</script>

@@ -1,0 +1,78 @@
+
+                            addEventListener
+
+addEventListener use for creating any event for any tag like - 
+
+                      Event name                    
+
+                        change              
+                        click               
+                        mouseover           
+                        mouseout            
+                        keydown             
+                        load             
+
+<!DOCTYPE html>
+<body>
+    <button>Like me</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click",likefun);
+
+    function likefun()
+    {
+        console.log("inside like");
+    }
+</script>
+
+
+------------------------------------------------------------------------------------------
+
+                        /*  createElement, setAttribute , append  */
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    
+</body>
+</html>
+
+<script>     
+
+    // step1: creating h1 tag:- 
+
+    let head = document.createElement("h1");
+    let heading2 = document.createElement("h2");
+    let btn = document.createElement("button");
+
+
+    // step2: full the tags with innertext
+
+    head.innerText = "I am heading 1";
+    heading2.innerText = "I am heading 2"; 
+    btn.innerText = "Masai";
+
+
+    /* setAttribute use for creating a class and with provide a name for this class */
+
+    // setAttribute syntex = setAttribute("attributeName","attributeValue")
+    // setAttribute for class or id -> element.setAttribute("class", "classname");  
+    // setAttribute for id -> id.setAttribute("id", "idsname");  
+    // setAttribute for anchar tag ->  a.setAttribute("href","www.w3schools.com");
+    // setAttribute for img tag ->  img.setAttribute("src","imgs/2-arrows.png");
+    // setAttribute for button tag ->  button.setAttribute("style", "background:yellow");
+    // setAttribute for input tag ->  input_tag.setAttribute("type", "button");
+    // setAttribute("id","container")
+
+
+    btn.setAttribute("class", "container");
+    btn.setAttribute("type", "submit");
+
+
+
+    // step3: add/append h1 tag to body 
+
+    document.querySelector("body").append(head, heading2,btn);
+
+</script>
