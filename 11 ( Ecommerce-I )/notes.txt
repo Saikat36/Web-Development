@@ -1,0 +1,14 @@
+
+
+Local Storage for array & object
+
+
+1. To set ta data in localStorage use "JSON.stringify()"= 
+
+         localStorage.setItem("All_data",JSON.stringify(queArr))
+
+
+
+2. To get ta data from localStorage use "JSON.parse()"= 
+
+        JSON.parse(localStorage.getItem("All_data")) || []

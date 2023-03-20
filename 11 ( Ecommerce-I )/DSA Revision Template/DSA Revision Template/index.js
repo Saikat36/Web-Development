@@ -1,17 +1,22 @@
 
 document.querySelector("form").addEventListener("submit", myDSA); 
-let queArr = [];
+let queArr = JSON.parse(localStorage.getItem("All_data")) || [];
+
+window.addEventListener("load",function(){  // web browser load 
+    displayTable (queArr);                 // hobar porau jate LS
+})                                        // data browser show kore
+
 function myDSA (event) { 
     event.preventDefault();
     let queObj = {
         queTitle: document.querySelector("#title").value, 
         queLink: document.querySelector("#link").value, 
-        queDifficulty: document.querySelector("#difficulty").value, 
+        queDifficulty: document.querySelector("#difficulty").value 
     };
     
-    queArr.push(queObj);
-    //queArr.length = 2 
+    queArr.push(queObj);    // [{},{},{}]
     displayTable (queArr);
+    localStorage.setItem("All_data",JSON.stringify(queArr))
 }
 
 function displayTable (queArr) {

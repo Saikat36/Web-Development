@@ -33,11 +33,12 @@ To use localStorage in your web applications, there are four methods to choose f
     Note:- Both key & value should be in form of string
 
 
-2. Adding an item to local Storage getltem() syntax: 
+2. geting an item to local Storage getltem() syntax: 
 
     Syntax :-   localStorage.getltem("key");
 
 
-3. Adding an item to local Storage JSON.parse() syntax: 
+3. Convert JSON file to object file using JSON.parse() syntax: 
 
     Syntax :- JSON.parse(localStorage.getItem("key_name"))
+
