@@ -19,6 +19,11 @@
       <div><a href="applied.html">Applied Jobs</a></div>
       <div><a href="bookmark.html">Bookmarks</a></div>
     </div>
+    <select id="sortNames" onchange="handleNameSort()">
+      <option value="">Sort By Name</option>
+      <option value="Ascending">Ascending</option>
+      <option value="Descending">Descending</option>
+    </select>
     <main>
       <table>
         <thead>
@@ -34,12 +39,22 @@
     </main>
   </body>
   <script>
-            //splice() Method
-      
-      let bookMarkDataFromLS = JSON.parse(localStorage.getItem("bookMarkData"));
-     
-      bookMarkDataFromLS.forEach(function (elem) {
 
+    let bookMarkDataFromLS = JSON.parse(localStorage.getItem("bookMarkData"));
+    function handleNameSort{
+
+    }
+
+                //splice() Method
+
+
+
+    displayTable(bookMarkDataFromLS);
+
+    function displayTable(bookMarkDataFromLS) {
+      document.querySelector("tbody").innerHTML = "";
+      bookMarkDataFromLS.forEach(function (elem, index) {
+        
         let tr = document.createElement("tr");
 
         let td1 = document.createElement("td");
@@ -53,18 +68,23 @@
 
         let td4 = document.createElement("td");
         td4.innerText = "Delete";
-        td4.setAttribute("class","delete");
-        td4.addEventListener("click",delete_data);
+        td4.setAttribute("class", "delete");
+        td4.addEventListener("click", function () {
+          delete_data(index);
+        });
 
-        tr.append(td1, td2, td3,td4);
+        tr.append(td1, td2, td3, td4);
         document.querySelector("tbody").append(tr);
       });
+    }
 
-      function delete_data(event){
-        // event.target.parentNode.remove();
-        // 38:13
-      }
-
-
+    function delete_data(index) {
+      bookMarkDataFromLS.splice(index, 1);
+      localStorage.setItem("bookMarkData", JSON.stringify(bookMarkDataFromLS));
+      // window.location.reload();
+      displayTable(bookMarkDataFromLS);
+    }
   </script>
 </html>
+
+<!-- 1:08 -->
