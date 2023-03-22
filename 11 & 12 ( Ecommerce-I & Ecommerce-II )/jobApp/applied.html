@@ -69,12 +69,12 @@
 
         let td5 = document.createElement("td");
         td5.innerText = "Bookmark";
+        td5.style.padding ="20px";
         td5.addEventListener("click", function () {
           bookmarkFun(elem);
         });
 
         tr.append(td1, td2, td3, td4, td5);
-        td5.innerText = "Bookmark";
         document.querySelector("tbody").append(tr);
       });
     }

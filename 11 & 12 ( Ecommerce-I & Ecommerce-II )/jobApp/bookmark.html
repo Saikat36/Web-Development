@@ -41,14 +41,9 @@
   <script>
 
     let bookMarkDataFromLS = JSON.parse(localStorage.getItem("bookMarkData"));
-    function handleNameSort{
+    // function handleNameSort{
 
-    }
-
-                //splice() Method
-
-
-
+    // }
     displayTable(bookMarkDataFromLS);
 
     function displayTable(bookMarkDataFromLS) {
@@ -81,10 +76,56 @@
     function delete_data(index) {
       bookMarkDataFromLS.splice(index, 1);
       localStorage.setItem("bookMarkData", JSON.stringify(bookMarkDataFromLS));
-      // window.location.reload();
+      // window.location.reload()
       displayTable(bookMarkDataFromLS);
     }
   </script>
 </html>
+
+
+<!-- For deleteing row in the browser not in LS = event.target.parentNode.remove()  -->
+
+
+<!-- For deleteing row in the browser and also LS :-
+
+  1st deleteing the row from LS =          1. bookMarkDataFromLS.splice(index, 1);
+  2nd set the updated JSON data on LS =    2. localStorage.setItem("bookMarkData", JSON.stringify(bookMarkDataFromLS));
+  3rd call function for showing result =   3. displayTable(bookMarkDataFromLS);
+  
+-->
+
+
+<!--                      splice() Function
+
+        // splice() is a array method, & the syntex is in below  
+        // splice(starting-Index, how many index want to delete)
+
+                        
+                        0        1        2       3
+        var names = ["kunal", "tanuj", "vivek", "rohan"]
+        //splice (startIndex, deleteCount) I
+        names.splice (1,2)
+        console.log(names)    // ["kunal", "rohan"]
+
+
+--------------------------------------------------------------------------------------
+
+                      splice() Function on Array object
+
+
+        let phones =[{name:"samsung", price: 50000},
+                    {name:"apple", price: 80000},
+                    {name: "oneplus", price: 40000}];
+
+        //splice (startIndex, deleteCount)
+        phones.splice (0,1)
+        console.log(phones)     // [{name:"apple", price: 80000},
+                                    {name: "oneplus", price: 40000}]
+
+
+
+
+
+ -->
 
 <!-- 1:08 -->

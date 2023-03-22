@@ -21,9 +21,9 @@ function myfunction(event)
     let tr = document.createElement("tr");      /* This is row */
     
     let td1 = document.createElement("td");     /* column */
-    let imag = td1.createElement("img");
-    let x = imag.setAttribute("src",avtar);
-    td1.append(x);
+    let img = document.createElement("img");
+    img.src = avtar;
+    td1.append(img);
 
     let td2 = document.createElement("td");     /* column */
     td2.innerText = name;
@@ -58,18 +58,14 @@ function myfunction(event)
     td9.style.color = "blue"
     td9.style.backgroundColor = "pink"
     td9.addEventListener("click",myfun);
-    function myfun(event){
-        event.target.parentNode.remove();
-    }
 
 
     tr.append(td1,td2,td3,td4,td5,td6,td7,td8,td9);
     document.querySelector("tbody").append(tr);
-
-
-
-
 }
 
+function myfun(event){
+    event.target.parentNode.remove();
+}
 
 /*  For deleteing the row  = event.target.parentNode.remove()  */

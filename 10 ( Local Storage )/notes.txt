@@ -42,3 +42,7 @@ To use localStorage in your web applications, there are four methods to choose f
 
     Syntax :- JSON.parse(localStorage.getItem("key_name"))
 
+
+4.  Remove an item by key from localStorage:
+
+    Syntax :- localStorage.removeItem(keyname)
