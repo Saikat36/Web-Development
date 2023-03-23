@@ -19,11 +19,7 @@
       <div><a href="applied.html">Applied Jobs</a></div>
       <div><a href="bookmark.html">Bookmarks</a></div>
     </div>
-    <select id="sortNames" onchange="handleNameSort()">
-      <option value="">Sort By Name</option>
-      <option value="Ascending">Ascending</option>
-      <option value="Descending">Descending</option>
-    </select>
+
     <main>
       <table>
         <thead>
@@ -41,9 +37,6 @@
   <script>
 
     let bookMarkDataFromLS = JSON.parse(localStorage.getItem("bookMarkData"));
-    // function handleNameSort{
-
-    // }
     displayTable(bookMarkDataFromLS);
 
     function displayTable(bookMarkDataFromLS) {
@@ -124,8 +117,4 @@
 
 
 
-
-
  -->
-
-<!-- 1:08 -->
