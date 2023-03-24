@@ -28,11 +28,11 @@
     </form>
   </body>
   <script>
-    //you need to code here
+
     document.querySelector("form").addEventListener("submit", myJobApp);
     let jobArr = JSON.parse(localStorage.getItem("jobData")) || [];
     function myJobApp() {
-      // event.preventDefault();
+      event.preventDefault();
       let jobObj = {
         personName: document.querySelector("#name").value,
         personEmail: document.querySelector("#email").value,
@@ -42,5 +42,6 @@
       jobArr.push(jobObj);
       localStorage.setItem("jobData", JSON.stringify(jobArr));
     }
+    
   </script>
 </html>

@@ -104,7 +104,7 @@ displayTable(filteredList);
 
     function displayTable(arrFromLS) {
       document.querySelector("tbody").innerHTML = "";
-      arrFromLS.forEach(function (elem) {
+      arrFromLS.forEach(function (elem,index) {
         // console.log(elem);
         let tr = document.createElement("tr");
 
@@ -125,6 +125,7 @@ displayTable(filteredList);
         td5.style.padding ="20px";
         td5.addEventListener("click", function () {
           bookmarkFun(elem);
+          deleteItem(index);
         });
 
         tr.append(td1, td2, td3, td4, td5);
@@ -135,6 +136,13 @@ displayTable(filteredList);
     function bookmarkFun(elem){
       bookmarkArr.push(elem);
       localStorage.setItem("bookMarkData", JSON.stringify(bookmarkArr));
+    }
+
+    function deleteItem(index)
+    {
+      arrFromLS.splice(index,1);
+      localStorage.setItem("jobData",JSON.stringify(arrFromLS));
+      displayTable(arrFromLS)
     }
 
   </script>

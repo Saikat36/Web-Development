@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Database</title>
     <link rel="stylesheet" href="commonStyles.css" />
+    <style>
+      tbody > tr > td:last-child {
+        background-color: rgb(0, 255, 247);
+        color: aliceblue;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        font-style: italic;
+        padding: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -46,6 +57,50 @@
     </main>
   </body>
   <script>
-    //you need to code here
+    let arrFromLS = JSON.parse(localStorage.getItem("jobData_2"));
+    let bookmarkArr = JSON.parse(localStorage.getItem("bookMarkData_2")) || [];
+
+    displayTable(arrFromLS);
+
+    function displayTable(arrFromLS) {
+      document.querySelector("tbody").innerHTML = "";
+      arrFromLS.forEach(function (elem, index) {
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerText = elem.personEmail;
+
+        let td2 = document.createElement("td");
+        td2.innerText = elem.personEmail;
+
+        let td3 = document.createElement("td");
+        td3.innerText = elem.personRole;
+
+        let td4 = document.createElement("td");
+        td4.innerText = elem.personSalary;
+
+        let td5 = document.createElement("td");
+        td5.innerText = "Bookmark";
+        td5.addEventListener("click",function(){
+          bookmarkFun(elem);
+          // deleteItem(index);
+        })
+
+        tr.append(td1,td2,td3,td4,td5);
+        document.querySelector("tbody").append(tr)
+      });
+    }
+
+    function bookmarkFun(elem,index){
+      bookmarkArr.push(elem);
+      localStorage.setItem("bookMarkData_2",JSON.stringify(bookmarkArr));
+    }
+
+    function deleteItem(index){
+      arrFromLS.splice(index,1);
+      localStorage.setItem("jobData_2",JSON.stringify(arrFromLS));
+      displayTable(arrFromLS)
+    }
+
   </script>
 </html>
