@@ -57,18 +57,35 @@
     </main>
   </body>
   <script>
+
     let arrFromLS = JSON.parse(localStorage.getItem("jobData_2"));
+
+
+/* --------------------------- Sort by name ----------------------------- */
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------- */
+
     let bookmarkArr = JSON.parse(localStorage.getItem("bookMarkData_2")) || [];
 
     displayTable(arrFromLS);
 
+    
     function displayTable(arrFromLS) {
+
       document.querySelector("tbody").innerHTML = "";
+
       arrFromLS.forEach(function (elem, index) {
+
         let tr = document.createElement("tr");
 
         let td1 = document.createElement("td");
-        td1.innerText = elem.personEmail;
+        td1.innerText = elem.personName;
 
         let td2 = document.createElement("td");
         td2.innerText = elem.personEmail;
@@ -83,7 +100,7 @@
         td5.innerText = "Bookmark";
         td5.addEventListener("click",function(){
           bookmarkFun(elem);
-          // deleteItem(index);
+          deleteItem(index);
         })
 
         tr.append(td1,td2,td3,td4,td5);
