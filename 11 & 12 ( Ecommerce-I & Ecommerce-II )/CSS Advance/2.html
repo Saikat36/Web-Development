@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            /* 1rem means the 100% of Default Value */
+            font-size: 2rem;
+        }
+
+        /*  "em" is totally depend on how the parent font-size have,
+            if the parent font-size is 20px, then if I use 2em in 
+            the parent that means the child font-size is 40px  */
+            
+        div{
+            font-size: 20px;
+        }
+        div > span{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>Hello World</p>
+    <div>
+        <span>Hello from EM</span>
+    </div>
+</body>
+</html>
