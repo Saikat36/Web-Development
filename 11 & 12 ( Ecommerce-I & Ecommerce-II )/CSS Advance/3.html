@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100%;
+        position: relative;
+      }
+      img {
+        width: 100%;
+      }
+      button {
+        position: absolute;
+        top: 40%;
+        background-color: rgba(10, 9, 9, 0.6);
+        border: none;
+        color: white;
+      }
+      button:nth-child(2) {
+        left: 10px;
+        font-size: 20px;
+        background: transparent;
+      }
+      button:nth-child(3) {
+        right: 10px;
+        font-size: 20px;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img id="crauser" src="https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png" alt="Error"/>
+      <button id="left-btn"><</button>
+      <button id="right-btn">></button>
+    </div>
+  </body>
+</html>
+
+<script>
+  let imagesLink = [
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png",
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider2.png",
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider3.png"
+  ];
+
+  let leftBtn = document.getElementById("left-btn");
+  let rightBtn = document.getElementById("right-btn");
+  let crauser = document.getElementById("crauser");
+  let imageState = 0;
+
+  rightBtn.addEventListener("click", function () {
+    imageState++;
+    if (imageState === imagesLink.length) {
+      imageState = 0;
+    }
+    crauser.setAttribute("src",imagesLink[imageState]);
+  });
+
+  leftBtn.addEventListener("click", function () {
+    imageState--;
+    if (imageState < 0) {
+      imageState = imagesLink.length - 1;
+    }
+    crauser.src = imagesLink[imageState];
+  });
+</script>

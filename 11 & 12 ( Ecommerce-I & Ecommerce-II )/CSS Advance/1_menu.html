@@ -24,9 +24,25 @@
         height: 1000px;
         background-color: yellow;
       }
+
+      /* By default when using positions which comes last will be 
+         at the top, so we need to use z-index property  */
+
+      /* if you do-not use top then position: absolute is useless */
+      
+      .popup{
+        position: absolute;
+        width: 90vw;
+        height: 80vh;
+        background-color: green;
+        top: 20px;  
+        z-index: 2;
+      }
+
     </style>
   </head>
   <body>
+    <div class="popup"></div>
     <div class="black"></div>
     <div class="nav"></div>
     <div class="main"></div>

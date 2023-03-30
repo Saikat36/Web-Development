@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        
+        .box {
+            border: 2px solid red;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        #box3 {
+            position: absolute;     /* position: absolute; */
+            top: 34px;              /* position: absolute; Overlap kore */
+            left: 34px;        
+        }
+        .container{
+            border: 2px solid blueviolet;
+            background-color: khaki;
+            height: 344px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat with us</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>
