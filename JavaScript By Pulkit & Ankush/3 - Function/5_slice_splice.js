@@ -29,24 +29,25 @@ console.log(animals.slice());
 // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
 
 
-
+console.log("\n"+"           Splice            "+"\n");
 
                     /* Splice() */
 
 /* Syntax =
             splice(start)
-            splice(start, deleteCount)
-            splice(start, deleteCount, item1)
-            splice(start, deleteCount, item1, item2, itemN) */
+            splice(start, delete_no_in_Count)
+            splice(start, delete_no_in_Count, item1)
+            splice(start, delete_no_in_Count, item1, item2, itemN) */
 
 
 const months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
-// Inserts at index 1
+
+
+months.splice(1, 0, 'Feb'); // Inserts at index 1
 console.log(months);
 // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
 
-months.splice(4, 1, 'May');
-// Replaces 1 element at index 4
+
+months.splice(4, 1, 'May'); // Replaces 1 element at index 4
 console.log(months);
 // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
