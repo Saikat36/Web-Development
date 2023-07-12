@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function nikeProduct(n,p)   // constructor
+    {
+        this.name = n;
+        this.price = p;
+    }
+
+    nikeProduct.prototype.discount = function ()    // creating methods
+    {
+        console.log("20% discount");
+    }
+
+    let p1 = new nikeProduct("shows",2000);  // creating object | constructor function
+
+    p1.discount();       // calling by parent function
+    nikeProduct.prototype.discount();  // calling by child function
+
+    console.log("p1 : ",p1);
+
+</script>

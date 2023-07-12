@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let bedroom = {         // creating 1st object
+        name:"bedroom"
+    };
+
+    let kitchen = {         // creating 2nd object
+
+        name: "kitchen",
+
+        cookfood: function (order){
+            console.log(`Serving ${order} in ${bedroom.name}`);
+            console.log(`Serving ${order} in ${this.name}`);
+        }
+    };
+
+    kitchen.cookfood("Maggie")  // akhena "bedroom.name" & "this" 2 to alada jaiga represedent kor6e, tai jodi bayra theka kono onno room theka 
+
+</script>

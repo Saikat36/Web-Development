@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>           /*    Here I use Prototype method  */
+
+    function Person(n,a)    // Constructor
+    {
+        this.name = n;
+        this.age = a;
+    }
+
+    let nextPerson = new Person ("raj",23); // nextPerson = object, Person = Constructor function 
+                                            // "new" jonno "Person" name ar object create ho66e
+    console.log(typeof(nextPerson));
+    console.log(typeof(Person));
+
+    Person.prototype.setCity = "bangalore"  // [[Prototype]] = child object a value set korar process
+    nextPerson.setCity = "goa"  // parent object a value set korar process
+
+    console.log("nextPerson: ",nextPerson);
+    console.log("nextPerson prototype : ",nextPerson.setCity);
+
+
+</script>
+
+
+<!-- Prototype ar vitorer value ke set korar somoy (Function_name.prototype.variable_name) use kora hoi kintu Prototype ar value ke print korar somoy (Function_name.variable_name) use kora hoi 
+
+    example = Person.prototype.setCity = "bangalore"
+
+    here ,  1. Person = function name
+            2.        = .prototype  
+            3. variable_name = setCity
+
+-->

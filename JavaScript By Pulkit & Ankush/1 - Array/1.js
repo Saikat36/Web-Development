@@ -13,5 +13,5 @@ num.pop();
 console.log(num);
 
 
-num.pop(4);
+num.pop(3);
 console.log(num);

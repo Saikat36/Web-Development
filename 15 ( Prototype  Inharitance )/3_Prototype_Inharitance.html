@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function Person(n,a)    // Constructor
+    {
+        this.name = n;
+        this.age = a;
+    }
+
+    Person.prototype.setCity = function (c)   // here the Prototype are Inharit
+    {
+        this.city = c;
+    }
+
+
+    let person1 = new Person ("raj",23);
+
+    person1.setCity("bangalore");   // parent object a ( key:value ) set korar process
+    Person.prototype.setCity("kolkata"); // [[Prototype]] = child object a (key:value) set korar process
+
+    console.log("person1: ",person1);
+
+</script>

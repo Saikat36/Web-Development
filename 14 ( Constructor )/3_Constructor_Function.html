@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>        /* Same question using this & new keyword */
+
+                    /* creating normal function */
+
+    function nikeProduct(n,t,p)  
+    {
+        let obj = {};            
+
+        obj.name = n;
+        obj.type = t;
+        obj.price = p;       
+
+        return obj;         // return object
+    };
+
+    let x = nikeProduct("shoe","sneaker",8000);
+    console.log("x : ",x);
+
+
+
+                    /* Constructor Function */
+
+
+    function nikeProductCF(n,t,p)
+    {
+        this.name = n;
+        this.type = t;
+        this.price = p;
+    };
+
+    let y = new nikeProductCF("T-Shirt","Sport",2300);
+    console.log("y : ",y);
+
+
+</script>

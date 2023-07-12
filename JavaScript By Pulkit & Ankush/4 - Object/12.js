@@ -38,7 +38,7 @@ console.log("sum is: ",sum);
 
 /* 
 
-# Four Combination of storing the data:- 
+ Four Combination of storing the data:- 
 
     1. Object inside object (nested object )
     2. Array inside object

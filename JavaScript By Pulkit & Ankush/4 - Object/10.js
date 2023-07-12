@@ -18,7 +18,7 @@ for (let i = 0; i < str.length; i++)
     }
     else{
         obj[elem]++;
-    }        
+    }       
 }
 
 console.log(obj);

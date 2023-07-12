@@ -23,4 +23,3 @@ console.log(saikat[x]);
 
 let y = "city";
 console.log(saikat.y);      // undefined 
-

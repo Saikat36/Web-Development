@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<style>
+    #heading{
+        /* border: 2px solid red; */
+        width: 30%;
+        text-align: center;
+        margin: auto;
+    }
+    #heading>h1{
+        font-size: 35px;
+    }
+
+    #cards-section{
+        width: 60%;
+        /* border: 2px solid rgb(144, 9, 240); */
+        margin: auto;
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-evenly;  /* #cards-section>div goloi soman width pabe */
+    }
+    #cards-section > div{
+        width: 30%;
+        text-align: center;
+        border: 2px solid yellow;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        border-radius: 20px;
+    }
+    h2+h1+p{
+        text-decoration: line-through;  /* "Per Month" take kata dekhanor jonno */
+        font-style: italic;
+        margin-top: -10px;
+    }
+    h2+h1+p+p{
+        line-height: 25px;
+        padding: 0px 25px 0px 25px;
+        font-size: 20px;
+    }
+    #cards-section>div:nth-child(1)>h1{
+        color: green;
+    }
+    #cards-section>div:nth-child(2)>h1{
+        color: blue;
+    }
+    #cards-section>div:nth-child(3)>h1{
+        color: orange;
+    }
+    button{
+        color: blue;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid blue;
+        background-color: transparent;
+        margin-bottom: 2pc;
+    }
+</style>
+</head>
+<body>
+<div id="heading">
+    <h1>Choose a plan that right for your business</h1>
+    <p>
+    We collect reviews from our users so you can get an honest opinion of
+    what an experience with our website are really like!
+    </p>
+</div>
+
+
+<div id="cards-section">
+    <!-- This section should contain 3 children d hl,p,p,button -->
+    <div>
+        <h2>Starter Plan</h2>
+        <h1>Free</h1>
+        <p>Per Month</p>
+        <p>
+            We collect reviews from our users so you what an experience with our
+            website.
+        </p>
+        <button>Start Now</button>
+    </div>
+
+    <div>
+        <h2>Starter Plan</h2>
+        <h1>$39</h1>
+        <p>Per Month</p>
+        <p>
+            We collect reviews from our users so you what an experience with our
+            website.
+        </p>
+        <button>Start Now</button>
+    </div>
+
+    <div>
+        <h2>Starter Plan</h2>
+        <h1>$80</h1>
+        <p>Per Month</p>
+        <p>
+            We collect reviews from our users so you what an experience with our
+            website.
+        </p>
+        <button>Start Now</button>
+    </div>
+</div>
+
+</body>
+</html>

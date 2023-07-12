@@ -1,0 +1,46 @@
+
+                <!-- Using call -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+
+let bedroom = {         // creating 1st object
+  name: "bedroom",
+  purpose: "sleep",
+};
+
+let Living = {         // creating 2nd object
+  name: "Living Room",
+  purpose: "tv",
+}
+
+let kitchen = {        // creating 3rd object
+  name: "kitchen",
+  purpose: "cook",
+
+  cookfood(food) {
+    console.log(`Serving ${food} in ${this.name}`); // this = Living, bedroom
+  },
+};
+
+
+// kitchen.cookfood.call(this.name,"food");   // Using .call 
+//                          |        |
+//                          |        |
+//                          v        v
+
+   kitchen.cookfood.call(Living,"Maggie");   // .call 
+   kitchen.cookfood.call(bedroom,"Maggie");  // .call 
+
+
+</script>

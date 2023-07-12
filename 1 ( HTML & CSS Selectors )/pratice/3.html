@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Both 1 & 2 combine</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .parent_1{
+            width: 100%;
+            height: 300px;
+            /* position: fixed; */
+            background-color: #cccccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child_1{
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid navy;
+        }
+        .parent_2{
+            width: 100%;
+            height: 300px;
+            background-color: blueviolet;
+            position: relative;
+            top: 0; 
+            left: 0;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .child_2{
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent_1">
+        <div class="child_1">
+            <p>1st content here</p>
+        </div>
+    </div>
+
+    <div class="parent_2">
+        <div class="child_2">
+            <p>2nd content here</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
