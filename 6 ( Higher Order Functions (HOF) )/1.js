@@ -16,3 +16,13 @@ function dobrash(){
     line no =    8 -> 3 -> 4 -> 10 -> 11 -> 12 -> 5 -> 6
 
 */
+
+/* 
+    NOTE:  All Higher order Functions are only applicable for Arrays
+
+    Higher order Functions =    1. forEach()
+                                2. map() 
+                                3. filter() 
+                                4. reduce() 
+
+*/
