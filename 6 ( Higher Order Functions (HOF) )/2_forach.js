@@ -16,8 +16,8 @@ let res = sweets.forEach(function(element,index,array){
     return element;     /* "forEach" doesn't return anything */
 })
 
-console.log(res);
-console.log("\n----------------------------------------------------------------\n");
+console.log("\n"+res);
+console.log("\n---------------------------------------------\n");
 
 
 /* ---------------------------------------------------------------- */
