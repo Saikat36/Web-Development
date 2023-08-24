@@ -17,6 +17,7 @@ let saikat = {
 delete saikat["city"];
 console.log(saikat);
 
+
 // Dot notation
 
 delete saikat.married;

@@ -1,14 +1,38 @@
 
 
 
-/* forEach method */
 
-let arr = [2,4,6,8];
+function xyz() {
+    console.log("Xyz");
+ } 
 
-let box = [];
+console.log(xyz());
+// console.log(console.log("saikat"));
 
-arr.forEach(function(el,i,array){
-    box.push(el*2);
-});
 
-console.log(box);
+
+
+function abc(){
+   return "Abc";
+}
+
+console.log(abc());
+
+
+
+/* -------------------------------------------- */
+
+
+
+function sum1(a,b){
+   console.log(a+b);
+}
+
+sum1(2,3);
+
+
+function sum2(a,b){
+   return (a+b);
+}
+
+console.log(sum2(2,3));

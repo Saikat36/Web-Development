@@ -1,26 +1,16 @@
 
 
 
-        /* map method */
+/* forEach method */
 
-
+/* NOTE - "forEach" doesn't return anything  */
 
 let arr = [2,4,6,8];
 
+let box = [];
 
-let okArr = arr.map(function(el,i,array){
-    return el;
+arr.forEach(function(el,i,array){
+    box.push(el*2);
 });
 
-console.log(okArr);
-
-
-
-
-/* --------------------------------------- */
-
-
-let multiply = function (el){
-    return el*2;
-}
-
+console.log(box);
