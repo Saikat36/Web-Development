@@ -13,6 +13,7 @@ let obj = {
         console.log("Age is",this.age);
         let output = this.hobbies.join(" , ");      // join function
         console.log("Hobbies are",output);
+        console.log(typeof(output));
     }
 };
 
