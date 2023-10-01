@@ -9,6 +9,12 @@ num.push(8,9);
 console.log(num);
 
 
+let animal = ["pigs", "goats", "sheep"];
+let gum = animal.push("horse");
+console.log(gum);
+console.log(animal);
+
+
 num.pop();
 console.log(num);
 
