@@ -3,15 +3,16 @@
                     /*  shift  &  unshift   */
 
 
-/* Shift (remove) the first element of the array: */
+/* Shift remove the first element of the array: */
+/* unshift add the element at the beggining of the array: */
 
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.shift();
 console.log(fruits);
 
 
 
-const fruit = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = ["Banana", "Orange", "Apple", "Mango"];
 fruit.unshift("Lemon", "Pineapple");
 console.log(fruit);

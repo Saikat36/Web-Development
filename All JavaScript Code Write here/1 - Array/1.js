@@ -14,11 +14,13 @@ console.log(gum);    // length of the animal arr = 4
 
 let x = animal.pop();
 
-console.log(x);          // return only the pop element = horse
+
 console.log(animal);    // [ 'pigs', 'goats', 'sheep' ]
+console.log(x);          // return only the pop element = horse
 
 
 
+/* --------------------------------------------------------- */
 
 console.log("\n\n");
 
