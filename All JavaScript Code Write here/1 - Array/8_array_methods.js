@@ -62,3 +62,20 @@ console.log(reversedElements);  // Output: ['Water', 'Air', 'Fire']
 let fruit = ['banana', 'apple', 'cherry'];
 fruit.sort();
 console.log(fruit);  // Output: ['apple', 'banana', 'cherry']
+
+
+
+/* 8. splice() Method */
+
+let num2 = [1, 2, 3, 4];
+num2.splice(2, 0, 78);  // Inserts 78 at index 2
+console.log(num2);     //  Output: [ 1, 2, 78, 3, 4 ]
+
+
+
+/* 9. slice() Method */
+
+let el = ['Fire', 'Air', 'Water', "creater", "Destroyer"];
+
+console.log(el.slice(3));     // let el = ['creater', 'Destroyer']
+console.log(el.slice(1,3));     // let el = ['Air', 'Water']

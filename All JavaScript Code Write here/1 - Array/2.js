@@ -9,10 +9,10 @@
 
 let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.shift();
-console.log(fruits);
+console.log(fruits);  // [ 'Orange','Apple','Mango' ]
 
 
 
 let fruit = ["Banana", "Orange", "Apple", "Mango"];
 fruit.unshift("Lemon", "Pineapple");
-console.log(fruit);
+console.log(fruit);  // [ 'Lemon','Pineapple','Banana','Orange','Apple','Mango' ]

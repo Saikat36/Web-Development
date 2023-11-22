@@ -73,5 +73,13 @@ console.log(str9.trim()); // Output: "Hello, world!"
 /*             10. **`concat`**             */
 
 let str10 = "Hello, ";
-let str20 = "world!";
-console.log(str10.concat(str20)); // Output: "Hello, world!"
+let str11 = "world!";
+console.log(str10.concat(str11)); // Output: "Hello, world!"
+
+
+
+/*             11. **`slice`**             */
+
+let str12 = 'Hello, World!';
+let str13 = str12.slice(7, 12);  // Slice characters from index 7 to 11
+console.log(str13);  // Output: "World"
