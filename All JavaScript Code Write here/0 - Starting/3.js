@@ -1,15 +1,17 @@
 
 
+// Reverse a string
 
-// Reverse a string 
 
+function rev(str) {
 
-let str = "masai";
+  let bag = "";
 
-let bag = "";
-
-for(let i=str.length-1; i>=0;i--)
-{
-    bag = bag+str[i];
+  for (let i = str.length - 1; i >= 0; i--) {
+    bag = bag + str[i];
+  }
+  return bag;
 }
-console.log(bag);
+
+
+console.log(rev("masai"));
