@@ -22,7 +22,9 @@ console.log(str1+str2);     //  1245
 
 
 
+
 /*                  convert to Number               */
+
 
 
 let num1 = +str1;   // unary plus operator to convert the string to a number
