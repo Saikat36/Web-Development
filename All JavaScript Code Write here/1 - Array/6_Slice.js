@@ -4,9 +4,9 @@
 let elements = ['Fire', 'Air', 'Water', "creater", "Destroyer"];
 
 
-console.log(elements.slice(3));     // let elements = ['creater', 'Destroyer']
+console.log(elements.slice(3));        //  ['creater', 'Destroyer']
 
-console.log(elements.slice(1,3));     // let elements = ['Air', 'Water']
+console.log(elements.slice(1,3));     //  ['Air', 'Water']
 
 
 /* 

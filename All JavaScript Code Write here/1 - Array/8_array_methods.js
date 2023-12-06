@@ -7,7 +7,9 @@
 
 let elements = ['Fire', 'Air', 'Water'];
 elements.forEach((element, index) => {
-  console.log(`Element at index ${index}: ${element}`);
+  console.log(`Index ${index}: ${element}`); // Index 0: Fire
+                                             // Index 1: Air
+                                             // Index 2: Water
 });
 
 
