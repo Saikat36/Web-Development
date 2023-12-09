@@ -26,7 +26,6 @@ console.log(num);     //  [ 1, 2, 78, 4 ]
 
 
 
-
 /*          Explain  =  num.splice(2, 0, 78);
 
 2: The first argument to splice is the index at which we want to start modifying the array. In this case, we want to start at index 2.
