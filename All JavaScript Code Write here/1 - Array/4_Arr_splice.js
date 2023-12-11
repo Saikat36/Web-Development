@@ -16,11 +16,14 @@ so now if I want to add 78 at the index 2 then use splice method */
 
 let num = [1, 2, 3, 4];
 
+
 num.splice(2, 0, 78);  // Inserts 78 at index 2
 console.log(num);     //  [ 1, 2, 78, 3, 4 ]
 
-num.splice(2, 1, 78);  // Inserts 78 at index 2
-console.log(num);     //  [ 1, 2, 78, 4 ]
+
+let num2 = [1, 2, 3, 4];
+num2.splice(1, 2, 78);  // Inserts 78 at index 1
+console.log(num2);     //  [ 1, 78, 4 ]
 
 
 
